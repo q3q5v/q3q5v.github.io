@@ -1,17 +1,265 @@
-<<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diddy & Nettspend | Modern Fan Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Modern CSS Styles */
+    :root {
+      --primary: #8a2be2;
+      --secondary: #20b2aa;
+      --dark: #1a1a1a;
+      --light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .gradient-header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gradient-header h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .artist-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .artist-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .artist-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-icon {
+      font-size: 1.5rem;
+      color: var(--light);
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: var(--primary);
+      transform: scale(1.2);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--primary);
+      color: var(--light);
+      border: none;
+      padding: 1rem;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      
+      .gradient-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="gradient-header">
+    <h1>Diddy & Nettspend</h1>
+  </header>
+
+  <nav class="glass-nav">
+    <ul class="nav-links">
+      <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+      <li><a href="#music"><i class="fas fa-music"></i> Music</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about" class="section">
+      <div class="card-content">
+        <h2>Legends of the Beat</h2>
+        <p>Explore the musical journey of two generations of hip-hop royalty. From Diddy's iconic Bad Boy Records era to Nettspend's viral modern hits, discover their impact on music culture.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram social-icon"></i></a>
+          <a href="#"><i class="fab fa-spotify social-icon"></i></a>
+          <a href="#"><i class="fab fa-youtube social-icon"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="card-grid">
+        <!-- Replace with actual image URLs -->
+        <div class="artist-card">
+          <img src="https://source.unsplash.com/random/800x600?rapper" alt="Diddy">
+          <div class="card-content">
+            <h3>Diddy</h3>
+            <p>Entrepreneur • Producer • Icon</p>
+          </div>
+        </div>
+        <div class="artist-card">
+          <img src="https://source.unsplash.com/random/800x601?rapper" alt="Nettspend">
+          <div class="card-content">
+            <h3>Nettspend</h3>
+            <p>Innovator • Trendsetter • Visionary</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="music" class="section">
+      <div class="card-content">
+        <h2>Essential Tracks</h2>
+        <div class="music-grid">
+          <!-- Add embedded music players here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+
+  <script>
+    // Modern JavaScript Features
+    const sections = document.querySelectorAll('.section');
+    const themeToggle = document.querySelector('.theme-toggle');
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Theme toggle
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      themeToggle.querySelector('i').classList.toggle('fa-moon');
+      themeToggle.querySelector('i').classList.toggle('fa-sun');
+      
+      if(document.body.classList.contains('light-mode')) {
+        document.body.style.setProperty('--dark', '#f4f4f4');
+        document.body.style.setProperty('--light', '#1a1a1a');
+      } else {
+        document.body.style.setProperty('--dark', '#1a1a1a');
+        document.body.style.setProperty('--light', '#ffffff');
+      }
+    });
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
 </html>
